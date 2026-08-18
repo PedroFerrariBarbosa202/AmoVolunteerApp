@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VolunteerApp.Cards.RoleManageCard"
+             BackgroundColor="Transparent">
+
+    <ContentView.Resources>
+        <!-- Title Text -->
+        <Style x:Key="MainText" TargetType="Label">
+            <Setter Property="TextColor" Value="#222"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="Margin" Value="0,10"/>
+        </Style>
+
+        <!-- Subtitle/Text Label -->
+        <Style x:Key="SubText" TargetType="Label">
+            <Setter Property="TextColor" Value="#555"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+        </Style>
+
+        <!-- Entry Style -->
+        <Style x:Key="EntryStyle" TargetType="Entry">
+            <Setter Property="BackgroundColor" Value="#F8F8F8"/>
+            <Setter Property="TextColor" Value="#333"/>
+            <Setter Property="PlaceholderColor" Value="#888"/>
+            <Setter Property="HeightRequest" Value="40"/>
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            <Setter Property="Margin" Value="0,5,0,10"/>
+        </Style>
+
+        <!-- Picker Style -->
+        <Style x:Key="PickerStyle" TargetType="Picker">
+            <Setter Property="BackgroundColor" Value="#F8F8F8"/>
+            <Setter Property="TextColor" Value="#333"/>
+            <Setter Property="HeightRequest" Value="40"/>
+            <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            <Setter Property="Margin" Value="0,5,0,10"/>
+        </Style>
+    </ContentView.Resources>
+
+    <!-- Card -->
+    <Border
+        x:Name="RootBorder"
+        Stroke="#CCCCCC"
+        StrokeThickness="1.5"
+        BackgroundColor="White"
+        Padding="15"
+        Margin="10"
+        MaximumHeightRequest="500">
+        <Border.StrokeShape>
+            <RoundRectangle CornerRadius="20" />
+        </Border.StrokeShape>
+
+        <!-- Layout -->
+        <Grid RowSpacing="12" ColumnSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Header -->
+            <Label x:Name="RoleNameLabel"
+                   Grid.Column="0" Grid.ColumnSpan="2"
+                   Text="{Binding name}"
+                   Style="{StaticResource MainText}"
+                   FontSize="20"
+                   VerticalOptions="Center"/>
+
+            <ImageButton Grid.Column="2"
+                         Source="trash.png"
+                         WidthRequest="28"
+                         HeightRequest="28"
+                         HorizontalOptions="End"
+                         VerticalOptions="Center"
+                         Clicked="OnCloseClicked"/>
+
+            <!-- Number Limit -->
+            <Label x:Name="LimitLabel"
+                   Grid.Row="1" Grid.Column="0"
+                   Text="Número limite:"
+                   Style="{StaticResource SubText}" />
+        </Grid>
+    </Border>
+</ContentView>

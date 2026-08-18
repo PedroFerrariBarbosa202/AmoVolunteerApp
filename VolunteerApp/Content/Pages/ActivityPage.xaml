@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VolunteerApp.Pages.ActivityPage"
+             Title="ActivityPage"
+             BackgroundColor="{AppThemeBinding Dark=#262626, Light=#e0d7d7}">
+
+    <Grid x:Name="ContentGrid">
+        <Grid ColumnDefinitions="*, *, *" 
+              RowDefinitions="*, *, *">
+            <VerticalStackLayout Grid.Row="0" 
+                                 Grid.Column="0"
+                                 WidthRequest="200"
+                                 Margin="120,50,0,0">
+                <Label  x:Name="HourLabel"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Start"
+                        TextColor="{AppThemeBinding Dark=White, Light=Black}"
+                        FontSize="30"/>
+                <Label  x:Name="TodayLabel"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Start"
+                        TextColor="{AppThemeBinding Dark=White, Light=Black}"
+                        FontSize="20"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Grid.Row="1" 
+                                 Grid.Column="1" 
+                                 WidthRequest="500">
+                <Label VerticalOptions="Center" 
+                       HorizontalOptions="Center"
+                       TextColor="{AppThemeBinding Dark=White, Light=Black}"
+                       FontSize="25"
+                       Margin="0,30,0,0">
+                    Status:
+                </Label>
+
+                <Label x:Name="StatusLabel"
+                       VerticalOptions="Center" 
+                       HorizontalOptions="Center"
+                       TextColor="Red"
+                       FontSize="25"
+                       Margin="0,10,0,0">
+                    Ausente
+                </Label>
+            </VerticalStackLayout>
+
+            <Button x:Name="ActivityTrigger"
+                    Grid.Row="2" 
+                    Grid.Column="1"
+                    WidthRequest="250" 
+                    HeightRequest="50"
+                    Text="Marcar Ponto"
+                    BackgroundColor="Green"
+                    TextColor="White"
+                    Clicked="OnAddActivityClicked"/>
+        </Grid>
+    </Grid>
+</ContentPage>

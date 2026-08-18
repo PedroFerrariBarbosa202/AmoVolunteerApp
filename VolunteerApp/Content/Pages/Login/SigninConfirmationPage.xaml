@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VolunteerApp.Content.Pages.Login.SigninConfirmationPage"
+             Title="SigninConfirmationPage"
+             BackgroundColor="#e0d7d7">
+    <Border HorizontalOptions="Center" 
+        VerticalOptions="Center"
+        Stroke="Black"
+        StrokeThickness="2"
+        StrokeShape="RoundRectangle 10"
+        BackgroundColor="White"
+        WidthRequest="350">
+        
+        <VerticalStackLayout>
+            <HorizontalStackLayout 
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Margin="0,100,0,0">
+
+                <CheckBox Color="Green" CheckedChanged="OnCheckBoxChanged"/>
+                <Label WidthRequest="250" FontSize="15" LineBreakMode="WordWrap" TextColor="Black">
+                    Li a explicação sobre a instituição previamente disponível e entendo o trabalho e o propósito dela.
+                </Label>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                Margin="0,50,0,0">
+
+                <CheckBox Color="Green" CheckedChanged="OnCheckBoxChanged"/>
+                <Label WidthRequest="250" FontSize="15" LineBreakMode="WordWrap" TextColor="Black">
+                    Tenho em mente as responsabilidades que terei como voluntário e concordo em seguir as regras de integridade e atividade proposta pela instituição.
+                </Label>
+            </HorizontalStackLayout>
+
+            <Button 
+                x:Name="SendButton"
+                Text="Enviar Solicitação"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                WidthRequest="300"
+                HeightRequest="50"
+                Margin="0,100,0,50"
+                BackgroundColor="Gray"
+                IsEnabled="False"
+                Clicked="AddSolicitation"/>
+        </VerticalStackLayout>
+    </Border>
+</ContentPage>

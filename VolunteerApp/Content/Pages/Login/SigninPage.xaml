@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VolunteerApp.Content.Pages.Login.SigninPage"
+             Title="SigninPage" BackgroundColor="#e0d7d7">
+
+    <!-- Border externa para criar a borda preta do container branco -->
+    <ScrollView HorizontalOptions="Center" 
+            VerticalOptions="Center">
+        <Border 
+            Stroke="Black"
+            StrokeThickness="2"
+            WidthRequest="350"
+            StrokeShape="RoundRectangle 10"
+            BackgroundColor="White">
+
+        <VerticalStackLayout Spacing="15" 
+                            WidthRequest="300" 
+                            Padding="20">
+            <Label 
+                Text="Insira suas credenciais:"
+                HorizontalOptions="Center" 
+                TextColor="Black"
+                FontSize="22"
+                Padding="0, 25,0,0"
+                FontAttributes="Bold"/>
+
+            <Border
+                HeightRequest="150"
+                WidthRequest="150"
+                Stroke="White"
+                StrokeThickness="2"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                StrokeShape="RoundRectangle 75">
+
+                <ImageButton
+                    x:Name="UserImage"
+                    Source="user_icon.png"
+                    Aspect="AspectFill"
+                    Clicked="OnPickImageClicked"/>
+            </Border>
+
+            <Label 
+                Text="Dados Pessoais:"
+                HorizontalOptions="Start" 
+                TextColor="Black"
+                FontSize="15"
+                Padding="10,15,0,0"/>
+
+            <Border Stroke="black"
+                    StrokeThickness="1"
+                    StrokeShape="RoundRectangle 5"
+                    WidthRequest="250">
+                <Entry x:Name="NameEntry"
+                       ClassId="NameEntry"
+                       TextColor="Black"
+                       Placeholder="Nome"
+                       BackgroundColor="White"
+                       TextChanged="OnTextChanged"/>
+            </Border>
+
+            <Border Stroke="black"
+                    StrokeThickness="1"
+                    StrokeShape="RoundRectangle 5"
+                    WidthRequest="250">
+                <Entry x:Name="AgeEntry"
+                       ClassId="AgeEntry"
+                       TextColor="Black"
+                       Placeholder="Data de Nascimento (dia/mês/ano)"
+                       BackgroundColor="White"
+                       Completed="OnTextChanged" />
+            </Border>
+            
+            
+            <Border Stroke="black"
+                    StrokeThickness="1"
+                    StrokeShape="RoundRectangle 5"
+                    WidthRequest="250">
+                <Entry x:Name="PhoneEntry"
+                       ClassId="PhoneEntry"
+                       TextColor="Black"
+                       Placeholder="Telefone"
+                       BackgroundColor="White"
+                       TextChanged="OnTextChanged" />
+            </Border>
+
+                <Label 
+                    Text="Dados Profissionais:"
+                    HorizontalOptions="Start" 
+                    TextColor="Black"
+                    FontSize="15"
+                    Padding="10,15,0,0"/>
+
+                <Border Stroke="black"
+                        StrokeThickness="1"
+                        StrokeShape="RoundRectangle 5"
+                        WidthRequest="250">
+                <Entry x:Name="ProfessionEntry"
+                       ClassId="ProfessionEntry"
+                       TextColor="Black"
+                       Placeholder="Emprego"
+                       BackgroundColor="White"
+                       TextChanged="OnTextChanged" />
+            </Border>
+
+            <Border Stroke="black"
+                    StrokeThickness="1"
+                    StrokeShape="RoundRectangle 5"
+                    WidthRequest="250">
+                        <Entry x:Name="CompanyEntry"
+                       ClassId="CompanyEntry"
+                       TextColor="Black"
+                       Placeholder="Empresa"
+                       BackgroundColor="White"
+                       TextChanged="OnTextChanged" />
+            </Border>
+
+                <Label 
+                Text="Acesso à conta:"
+                HorizontalOptions="Start" 
+                TextColor="Black"
+                FontSize="15"
+                Padding="10,15,0,0"/>
+
+                <Border Stroke="black"
+                    StrokeThickness="1"
+                    StrokeShape="RoundRectangle 5"
+                    WidthRequest="250">
+                <Entry x:Name="EmailEntry"
+                       ClassId="EmailEntry"
+                       TextColor="Black"
+                       Placeholder="Email"
+                       BackgroundColor="White"
+                       TextChanged="OnTextChanged" />
+            </Border>
+
+            <Border Stroke="black"
+                    StrokeThickness="1"
+                    StrokeShape="RoundRectangle 5"
+                    WidthRequest="250"
+                    Margin="0,0,0,30">
+                <Entry x:Name="PasswordEntry"
+                       ClassId="PasswordEntry"
+                       TextColor="Black"
+                       Placeholder="Senha"
+                       BackgroundColor="White"
+                       TextChanged="OnTextChanged" />
+            </Border>
+        </VerticalStackLayout>
+    </Border>
+    </ScrollView>
+</ContentPage>

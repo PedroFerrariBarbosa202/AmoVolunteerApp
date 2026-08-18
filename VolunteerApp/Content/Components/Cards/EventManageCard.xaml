@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VolunteerApp.Cards.EventManageCard">
+
+    <!-- STYLE -->
+    <ContentView.Resources>
+        <Style x:Key="GeneralButtonStyle" TargetType="Button">
+            <Setter Property="Text" Value="Cancelar Inscrição"/>
+            <Setter Property="TextColor" Value="#AAAAAA"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+
+        <Style x:Key="BorderStyle" TargetType="Border">
+            <Setter Property="StrokeThickness" Value="2"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="HeightRequest" Value="130"/>
+        </Style>
+
+        <Style x:Key="MainText" TargetType="Label">
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+
+        <Style x:Key="DateText" TargetType="Label">
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+    </ContentView.Resources>
+
+    <Border x:Name="MainBorder"
+            BackgroundColor="#333333"
+            Stroke="{Binding color_fromHex}"
+            Style="{StaticResource BorderStyle}"
+            Margin="10">
+
+        <Border.StrokeShape>
+            <RoundRectangle CornerRadius="20"/>
+        </Border.StrokeShape>
+
+        <Grid ColumnDefinitions="*, *"
+              RowDefinitions="*, *">
+            <Label Text="{Binding name}"
+                   Style="{StaticResource MainText}"
+                   HorizontalOptions="Start"
+                   FontAttributes="Bold"
+                   TextColor="#AAAAAA"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   Margin="10,10,0,0"/>
+
+            <Label Text="{Binding date}"
+                   Style="{StaticResource DateText}"
+                   HorizontalOptions="Start"
+                   VerticalOptions="End"
+                   TextColor="#AAAAAA"
+                   FontAttributes="Bold"
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   Margin="10,0,0,0"/>
+
+            <Button x:Name="GoToButton"
+                    Style="{StaticResource GeneralButtonStyle}"
+                    HorizontalOptions="End"
+                    VerticalOptions="Start"
+                    Clicked="ExitEvent"
+                    FontAttributes="Bold"
+                    BackgroundColor="#474747"
+                    BorderColor="Red"
+                    BorderWidth="2"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Margin="0,0,10,0"/>
+        </Grid>
+    </Border>
+</ContentView>
+

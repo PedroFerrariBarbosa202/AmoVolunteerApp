@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VolunteerApp.Cards.NewsCard">
+    <VerticalStackLayout Spacing="10" Margin="0,20,0,0">
+
+        <Border WidthRequest="300"
+                HeightRequest="200"
+                Stroke="{AppThemeBinding Dark=White, Light=Black}"
+                StrokeThickness="3">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10"/>
+            </Border.StrokeShape>
+            <Image x:Name="ImageView"
+               Source="dummyappimage.png"
+               Aspect="AspectFill"/>
+        </Border>
+
+        <Label x:Name="TitleEntry"
+            Text="Lançamento do novo aplicativo de gerenciamento."
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            TextColor="{AppThemeBinding Dark=White, Light=Black}"
+            FontAttributes="Bold"
+            FontSize="18"
+            HorizontalTextAlignment="Center"
+            Margin="0,20,0,0"/>
+        <Label x:Name="ContentEntry"
+            Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            TextColor="{AppThemeBinding Dark=White, Light=Black}"
+            HorizontalTextAlignment="Justify"
+            FontSize="15"/>
+
+        <!-- White Line -->
+        <Border BackgroundColor="{AppThemeBinding Dark=White, Light=Black}" 
+                 HeightRequest="3" 
+                 Grid.Row="1" 
+                 HorizontalOptions="Fill" 
+                 VerticalOptions="Center"
+                 Stroke="White"
+                 Margin="0,30,0,0">
+        </Border>
+    </VerticalStackLayout>
+</ContentView>

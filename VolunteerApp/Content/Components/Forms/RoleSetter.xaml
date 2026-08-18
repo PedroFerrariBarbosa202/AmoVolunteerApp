@@ -1,0 +1,138 @@
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VolunteerApp.Content.Forms.RoleSetter"
+             BackgroundColor="Transparent">
+
+    <!-- Full-screen dimmed background -->
+    <Grid BackgroundColor="#80000000"
+          HorizontalOptions="Fill"
+          VerticalOptions="Fill">
+
+        <!-- Centered container com duas linhas -->
+        <Grid HorizontalOptions="Center"
+              VerticalOptions="Start"
+              RowDefinitions="*,20,*" 
+              Padding="30"
+              MaximumWidthRequest="500"
+              MinimumWidthRequest="300">
+
+            <!-- Upper Border -->
+            <Border Grid.Row="0"
+                    Padding="20"
+                    Stroke="White"
+                    StrokeThickness="3"
+                    StrokeShape="RoundRectangle 20"
+                    BackgroundColor="#1C1C1C"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill">
+
+                <Grid RowDefinitions="Auto,*,Auto">
+
+                    <!-- Close Button -->
+                    <Button Text="X"
+                            BackgroundColor="Red"
+                            TextColor="White"
+                            CornerRadius="20"
+                            BorderColor="White"
+                            BorderWidth="2"
+                            MaximumWidthRequest="40"
+                            MaximumHeightRequest="40"
+                            HorizontalOptions="End"
+                            VerticalOptions="Start"
+                            ZIndex="1"
+                            Clicked="OnCloseClicked"/>
+
+                    <!-- Content -->
+                    <ScrollView Grid.Row="1">
+                        <VerticalStackLayout Spacing="15"
+                                             HorizontalOptions="Fill"
+                                             VerticalOptions="Start"
+                                             Padding="5">
+                            <Label Text="Escolha a data que queres participar:"
+                                   FontSize="15"
+                                   FontAttributes="Bold"
+                                   HorizontalOptions="Center"
+                                   TextColor="White"/>
+
+                            <Picker x:Name="DataPicker"
+                                    Title="Escolha data que queres participar"
+                                    HorizontalOptions="Fill"
+                                    TextColor="Black"
+                                    MaximumWidthRequest="300"
+                                    ZIndex="1"
+                                    BackgroundColor="#F5F5F5">
+                                    <Picker.Items>
+                                    </Picker.Items>
+                            </Picker>    
+
+                            <Label Text="Escolha o papél que queres exercer:"
+                                   FontSize="15"
+                                   FontAttributes="Bold"
+                                   HorizontalOptions="Center"
+                                   TextColor="White"/>
+
+                            <Picker x:Name="RolePicker"
+                                    IsEnabled="True"
+                                    Title="Escolha quais papéis adicionar"
+                                    HorizontalOptions="Fill"
+                                    TextColor="Black"
+                                    MaximumWidthRequest="300"
+                                    ZIndex="1"
+                                    BackgroundColor="#F5F5F5"
+                                    SelectedIndexChanged="OnPickerChanged">
+                                <Picker.Items>
+                                </Picker.Items>
+                            </Picker>
+
+                            <BoxView MaximumHeightRequest="20" Color="Transparent"/>
+                        </VerticalStackLayout>
+                    </ScrollView>
+
+                    <Button x:Name="FinalizationButton"
+                            Grid.Row="2"
+                            Text="Finalizar Inscrição"
+                            BackgroundColor="Gray"
+                            IsEnabled="False"
+                            TextColor="White"
+                            CornerRadius="10"
+                            HorizontalOptions="Fill"
+                            HeightRequest="45"
+                            Clicked="AddUser"/>
+                </Grid>
+            </Border>
+
+            <!-- Blank space -->
+            <BoxView Grid.Row="1" HeightRequest="20" BackgroundColor="#80000000"/>
+
+            <!-- Lower Border -->
+            <Border Grid.Row="2"
+                    Padding="20"
+                    Stroke="White"
+                    StrokeThickness="3"
+                    StrokeShape="RoundRectangle 20"
+                    BackgroundColor="#1C1C1C"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="Fill">
+
+                <Grid RowDefinitions="Auto,*,Auto">
+                    <!-- Content -->
+                    <ScrollView Grid.Row="1">
+                        <VerticalStackLayout x:Name="RoleStack"
+                                             Spacing="15"
+                                             HorizontalOptions="Fill"
+                                             VerticalOptions="Start"
+                                             Padding="5">
+
+                            <Label Text="Papéis selecionados:"
+                                   FontSize="15"
+                                   FontAttributes="Bold"
+                                   HorizontalOptions="Center"
+                                   TextColor="White"/>
+                        </VerticalStackLayout>
+                    </ScrollView>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</ContentView>
+

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VolunteerApp.Content.Pages.Login.ContactPage"
+             BackgroundColor="#e0d7d7"
+             Title="ContactPage">
+    <VerticalStackLayout VerticalOptions="Center" Spacing="20">
+        <Label 
+            Text="Sua conta está em verificação!"
+            FontAttributes="Bold"
+            FontSize="22"
+            VerticalOptions="Center" 
+            TextColor="Black"
+            HorizontalOptions="Center" />
+
+        <Label WidthRequest="260"
+            Text="Ação adicional de sua parte ainda é necessária. Por favor, utilize o contato abaixo para contatar os responsáveis pelos novos voluntários na AMO e combine uma data para a realização da entrevista. Dados adicionais (como documentação) serão gerenciados de forma presencial."
+            FontSize="16"
+            TextColor="Black"
+            HorizontalTextAlignment="Justify"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label  Text="Contatos:"
+                FontAttributes="Bold"
+                FontSize="22"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                TextColor="Black"
+                Margin="0,80,0,0"/>
+
+        <HorizontalStackLayout VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                Spacing="12">
+            <Label  Text="Telefone:"
+                FontAttributes="Bold"
+               TextColor="Black"
+                FontSize="20" />
+            <Label  Text="(51)99999999"
+                    FontAttributes="Bold"
+                     TextColor="Black"
+                    FontSize="20"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Spacing="12">
+            <Label  Text="Link Whatsapp:"
+                FontAttributes="Bold"
+                TextColor="Black"
+                FontSize="20" />
+            <Label  Text="LINK AQUI"
+                FontAttributes="Bold"
+                TextColor="Black"
+                FontSize="20"/>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

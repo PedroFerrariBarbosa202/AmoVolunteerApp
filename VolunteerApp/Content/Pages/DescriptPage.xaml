@@ -1,0 +1,59 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VolunteerApp.Pages.DescriptPage"
+             BackgroundColor="{AppThemeBinding Dark=#262626, Light=#e0d7d7}">
+
+    <ScrollView>
+        <Grid x:Name="ContentStack">
+            <VerticalStackLayout Spacing="15" Padding="20">
+            <Label x:Name="Title"
+                Text="Evento X" 
+                FontAttributes="Bold" 
+                TextColor="{AppThemeBinding Dark=White, Light=Black}"
+                FontSize="40"
+                HorizontalTextAlignment="Center" />
+
+            <Label x:Name="DateTime"
+                Text="23/4/2020"
+                FontSize="20"
+                TextColor="{AppThemeBinding Dark=White, Light=Black}"
+                HorizontalTextAlignment="Center" />
+
+            <Label x:Name="Description"
+                Text=""
+                FontSize="13"
+                WidthRequest="300"
+                TextColor="{AppThemeBinding Dark=White, Light=Black}"
+                LineBreakMode="WordWrap"
+                HorizontalTextAlignment="Center" />
+
+            <Label
+                Text="Link:"
+                Margin="0,20,0,0"
+                FontAttributes="Bold" 
+                TextColor="{AppThemeBinding Dark=White, Light=Black}"
+                FontSize="30"
+                HorizontalTextAlignment="Center" />
+
+            <Label x:Name="Link"
+                Text="https://chat.whatsapp.com/23112424"
+                FontSize="15"
+                TextColor="Blue"
+                HorizontalTextAlignment="Center">
+                    <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                     Tapped="OnLinkTapped" />
+                </Label.GestureRecognizers> 
+            </Label>
+
+            <Button Text="Inscrever-se"
+                    TextColor="White"
+                    WidthRequest="200"
+                    FontSize="20"
+                    BackgroundColor="Green"
+                    HorizontalOptions="Center" 
+                    Clicked="OpenRoleSetter"/>
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>

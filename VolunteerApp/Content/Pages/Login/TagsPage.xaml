@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:tag="clr-namespace:VolunteerApp.Content.Tags"
+             x:Class="VolunteerApp.Content.Pages.Login.TagsPage"
+             Title="TagsPage"
+             BackgroundColor="#e0d7d7">
+
+    <ScrollView
+        HorizontalOptions="Center" 
+        VerticalOptions="Center"
+        BackgroundColor="White">
+
+        <Border HorizontalOptions="Center" 
+            VerticalOptions="Center"
+            Stroke="Black"
+            StrokeThickness="2"
+            StrokeShape="RoundRectangle 10"
+            WidthRequest="350">
+
+            <VerticalStackLayout>
+                <Label 
+                Text="Em que setor queres agir?"
+                TextColor="Black"
+                FontAttributes="Bold"
+                FontSize="20"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                Margin="0,30,0,0"/>
+
+                <Label 
+                Text="Setores disponíveis:"
+                    TextColor="Black"
+                FontAttributes="Bold"
+                FontSize="16"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                Margin="0,30,0,20"/>
+
+                <VerticalStackLayout x:Name="ToChooseSectors"/>
+
+                <Label 
+                Text="Setores escolhidos:"
+                    TextColor="Black"
+                FontAttributes="Bold"
+                FontSize="16"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" 
+                Margin="0,0,0,20"/>
+
+                <VerticalStackLayout x:Name="ConnectedSectors"/>
+
+            </VerticalStackLayout>
+        </Border>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,63 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cards="clr-namespace:VolunteerApp.Cards"  
+             xmlns:page="clr-namespace:VolunteerApp"             
+             x:Class="VolunteerApp.Pages.MainPage"
+             Title=""
+             BackgroundColor= "{AppThemeBinding Dark=#262626, Light=#e0d7d7}">
+
+    <!-- STYLES -->
+    <ContentPage.Resources>
+        <Style x:Key="GeneralButtonStyle" TargetType="Button">
+            <Setter Property="TextColor" Value="{AppThemeBinding Dark=White, Light=Black}"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="WidthRequest" Value="250"/>
+            <Setter Property="HeightRequest" Value="80"/>
+            <Setter Property="CornerRadius" Value="20"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+        </Style>
+
+        <Style TargetType="Label" x:Key="TitleStyle">
+            <Setter Property="TextColor" Value="{AppThemeBinding Dark=White, Light=Black}"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <!-- LAYOUT -->
+
+    <Grid x:Name="ContentGrid">
+        <ScrollView>
+            <Grid VerticalOptions="Fill" 
+                  Padding="30">
+                <VerticalStackLayout x:Name="NewsStack"
+                                     Spacing="5" 
+                                     VerticalOptions="Start" 
+                                     HorizontalOptions="Center">
+                    <!--BLANK SPACE-->
+                    <BoxView HeightRequest="20" Opacity="0"/>
+
+                    <Label Text="AMO CRIANÇA"
+                           Style="{StaticResource TitleStyle}"
+                           FontSize="36"
+                           LineBreakMode="WordWrap"/>
+                    <Label Text="App do voluntário"
+                           FontSize="30"
+                           Style="{StaticResource TitleStyle}"
+                           LineBreakMode="WordWrap"/>
+
+                    <Label Text="Notícias:"
+                           FontSize="26"
+                           Style="{StaticResource TitleStyle}"
+                           LineBreakMode="WordWrap"
+                           Margin="0,50,0,0"/>
+
+                    <Label x:Name="NoNewsLabel"
+                           FontSize="16"
+                           Style="{StaticResource TitleStyle}"
+                           LineBreakMode="WordWrap"/>
+                </VerticalStackLayout>
+            </Grid>
+        </ScrollView>
+    </Grid>
+</ContentPage>

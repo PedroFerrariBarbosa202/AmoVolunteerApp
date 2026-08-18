@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VolunteerApp.Pages.SettingsPage"
+             Title="Settings"
+             BackgroundColor="{AppThemeBinding Light=#e0d7d7, Dark=#121212}">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="25">
+
+            <!-- Appearance Section -->
+            <Label Text="Aparência"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   TextColor="{AppThemeBinding Light=Black, Dark=White}" />
+
+            <Grid ColumnDefinitions="*,Auto">
+                <Label Text="Modo Escuro"
+                       VerticalOptions="Center"
+                       TextColor="{AppThemeBinding Light=Black, Dark=White}" />
+                <Switch Grid.Column="1"
+                        x:Name="DarkModeSwitch"
+                        Toggled="OnDarkModeToggled"/>
+            </Grid>
+
+            <Grid ColumnDefinitions="*,Auto">
+                <Label Text="Seguir Tema de Cores do Sistema"
+                       VerticalOptions="Center"
+                       TextColor="{AppThemeBinding Light=Black, Dark=White}" />
+                <Switch Grid.Column="1"
+                        x:Name="SystemThemeSwitch"
+                        IsToggled="False"
+                        />
+            </Grid>
+
+            <!-- About Section -->
+            <Label Text="Sobre"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   TextColor="{AppThemeBinding Light=Black, Dark=White}" />
+
+            <Label Text="Versão do App 1.1"
+                   Opacity="0.7"
+                   TextColor="{AppThemeBinding Light=Black, Dark=White}" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

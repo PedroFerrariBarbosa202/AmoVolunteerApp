@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VolunteerApp.Content.Pages.Login.LoginPage"
+             Title="LoginPage" BackgroundColor="#e0d7d7">
+
+    <!-- Border externa para criar a borda preta do container branco -->
+    <Grid x:Name="ContentGrid">
+        <Border HorizontalOptions="Center" 
+            VerticalOptions="Center"
+            Stroke="Black"
+            StrokeThickness="2"
+            StrokeShape="RoundRectangle 10"
+            BackgroundColor="White">
+
+            <VerticalStackLayout Spacing="15" 
+                            WidthRequest="300" 
+                            Padding="20">
+                <Label 
+                Text="Login"
+                HorizontalOptions="Center" 
+                TextColor="Black"
+                FontSize="40"
+                Padding="0, 25,0,0"
+                FontAttributes="Bold"/>
+
+                <Border Stroke="black"
+                    StrokeThickness="1"
+                    StrokeShape="RoundRectangle 5"
+                    WidthRequest="250">
+                    <Entry x:Name="EmailEntry"
+                       TextColor="Black"
+                       Placeholder="Email"
+                       BackgroundColor="White"/>
+                </Border>
+
+                <Border Stroke="black"
+                    StrokeThickness="1"
+                    StrokeShape="RoundRectangle 5"
+                    WidthRequest="250">
+                    <Entry x:Name="PasswordEntry"
+                       Placeholder="Senha"
+                       BackgroundColor="White"
+                       TextColor="Black"/>
+                </Border>
+
+                <Button Text="Entrar"
+                    BackgroundColor="Green"
+                    WidthRequest="250"
+                    Margin="0,10,0,0"
+                    Clicked="LoginUser"/>
+
+            </VerticalStackLayout>
+        </Border>
+    </Grid>
+</ContentPage>

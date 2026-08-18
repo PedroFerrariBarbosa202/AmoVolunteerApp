@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VolunteerApp.Content.Tags.Tag">
+    <ContentView.Resources>
+        <Style TargetType="Border" x:Key="FieldBorderStyle">
+            <Setter Property="WidthRequest" Value="250"/>
+            <Setter Property="HeightRequest" Value="50"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="StrokeShape" Value="RoundRectangle 20"/>
+            <Setter Property="StrokeThickness" Value="4"/>
+        </Style>
+    </ContentView.Resources>
+
+    <Border x:Name="Border"
+            Style="{StaticResource FieldBorderStyle}"
+            BackgroundColor="White"
+            Margin="0,0,0,20">
+        
+        <Grid>
+            <Label 
+            x:Name="NameTag"
+            Text="Tampinhas"
+            TextColor="Black"
+            FontSize="16"
+            FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
+            <Button x:Name="IncludeButton"
+                IsEnabled="True"
+                BackgroundColor="Transparent"
+                Clicked="OnSectorSelected"/>
+        </Grid>
+    </Border>
+</ContentView>

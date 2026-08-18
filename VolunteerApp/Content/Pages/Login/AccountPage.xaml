@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VolunteerApp.Content.Pages.Login.AccountPage"
+             xmlns:tag="clr-namespace:VolunteerApp.Content.Tags"
+             xmlns:view="clr-namespace:VolunteerApp.Content.Forms"
+             BackgroundColor="#e0d7d7">
+
+    <!-- RECURSOS GLOBAIS -->
+    <ContentPage.Resources>
+        <!-- TÍTULOS -->
+        <Style TargetType="Label" x:Key="TitleStyle">
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+        </Style>
+
+        <!-- ROTULOS -->
+        <Style TargetType="Label" x:Key="FieldLabelStyle">
+            <Setter Property="TextColor" Value="Black"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="LineBreakMode" Value="TailTruncation"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            <Setter Property="VerticalTextAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="10,10,10,10"/>
+        </Style>
+
+        <!-- BORDA -->
+        <Style TargetType="Border" x:Key="FieldBorderStyle">
+            <Setter Property="WidthRequest" Value="250"/>
+            <Setter Property="HeightRequest" Value="50"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="Stroke" Value="Green"/>
+            <Setter Property="StrokeThickness" Value="3"/>
+            <Setter Property="StrokeShape" Value="RoundRectangle 20"/>
+        </Style>
+
+        <!-- EDIÇÃO -->
+        <Style TargetType="ImageButton" x:Key="EditButtonStyle">
+            <Setter Property="Source" Value="edicao.png"/>
+            <Setter Property="Background" Value="#e0d7d7"/>
+            <Setter Property="WidthRequest" Value="20"/>
+            <Setter Property="HeightRequest" Value="20"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <!-- LAYOUT -->
+    <Grid x:Name="ContentGrid">
+        <ScrollView>
+            <Grid
+            VerticalOptions="Fill"
+            HorizontalOptions="Fill"
+            x:Name="ContentStack">
+            <!-- centralizado -->
+            <Grid VerticalOptions="Center"
+                      HorizontalOptions="Center">
+                <VerticalStackLayout Spacing="15">
+
+                    <Label Text="Edição de Conta" Margin="0,20,0,0"
+                               Style="{StaticResource TitleStyle}"/>
+
+                    <Border
+                        HeightRequest="150"
+                        WidthRequest="150"
+                        Stroke="White"
+                        StrokeThickness="2"
+                        BackgroundColor="#e0d7d7"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        StrokeShape="RoundRectangle 75">
+
+                        <ImageButton
+                            x:Name="UserImage"
+                            Source="user_icon.png"
+                            BackgroundColor="White"
+                            Aspect="AspectFill"
+                            Clicked="OnPickImageClicked"/>
+                    </Border>
+
+
+                    <!-- Espaço -->
+                    <BoxView HeightRequest="20" Opacity="0"/>
+
+                    <!-- CAMPOS -->
+
+                        <Label 
+                            Text="Dados Pessoais:"
+                            HorizontalOptions="Start" 
+                            TextColor="Black"
+                            FontSize="18"
+                            Padding="10,15,0,0"/>
+                        <!-- Name -->
+                        <HorizontalStackLayout Spacing="15"
+                                               HorizontalOptions="Center">
+                        <Border Style="{StaticResource FieldBorderStyle}">
+                            <Label x:Name="NameLabel" 
+                                       Style="{StaticResource FieldLabelStyle}">
+                                Loading...
+                            </Label>
+                        </Border>
+                        <ImageButton Style="{StaticResource EditButtonStyle}"
+                                         x:Name="NameButton"
+                                         ZIndex="1"/>
+                    </HorizontalStackLayout>
+
+                        <!-- birth -->
+                        <HorizontalStackLayout Spacing="15"
+                                               HorizontalOptions="Center">
+                        <Border Style="{StaticResource FieldBorderStyle}">
+                            <Label x:Name="AgeLabel" 
+                                       Style="{StaticResource FieldLabelStyle}">
+                                Loading...
+                            </Label>
+                        </Border>
+                        <ImageButton Style="{StaticResource EditButtonStyle}"
+                                         x:Name="AgeButton"
+                                         ZIndex="1"/>
+                    </HorizontalStackLayout>
+
+                        <!-- phone -->
+                        <HorizontalStackLayout Spacing="15"
+        HorizontalOptions="Center">
+                            <Border Style="{StaticResource FieldBorderStyle}">
+                                <Label x:Name="PhoneLabel" 
+Style="{StaticResource FieldLabelStyle}">
+                                    Loading...
+                                </Label>
+                            </Border>
+                            <ImageButton Style="{StaticResource EditButtonStyle}"
+  x:Name="PhoneButton"
+  ZIndex="1"/>
+                        </HorizontalStackLayout>
+
+                        <Label 
+                            Text="Dados Profissionais:"
+                            HorizontalOptions="Start" 
+                            TextColor="Black"
+                            FontSize="18"
+                            Padding="10,15,0,0"/>
+
+                        <!-- profession -->
+                        <HorizontalStackLayout Spacing="15"
+        HorizontalOptions="Center">
+                            <Border Style="{StaticResource FieldBorderStyle}">
+                                <Label x:Name="ProfessionLabel" 
+Style="{StaticResource FieldLabelStyle}">
+                                    Loading...
+                                </Label>
+                            </Border>
+                            <ImageButton Style="{StaticResource EditButtonStyle}"
+  x:Name="ProfessionButton"
+  ZIndex="1"/>
+                        </HorizontalStackLayout>
+
+                        <!-- company -->
+                        <HorizontalStackLayout Spacing="15"
+        HorizontalOptions="Center">
+                            <Border Style="{StaticResource FieldBorderStyle}">
+                                <Label x:Name="CompanyLabel" 
+Style="{StaticResource FieldLabelStyle}">
+                                    Loading...
+                                </Label>
+                            </Border>
+                            <ImageButton Style="{StaticResource EditButtonStyle}"
+  x:Name="CompanyButton"
+  ZIndex="1"/>
+                        </HorizontalStackLayout>
+
+            
+
+                        <Label 
+                        Text="Acesso à Conta:"
+                        HorizontalOptions="Start" 
+                        TextColor="Black"
+                        FontSize="18"
+                        Padding="10,15,0,0"/>
+
+                        <!-- email -->
+                        <HorizontalStackLayout Spacing="15"
+                           HorizontalOptions="Center">
+                            <Border Style="{StaticResource FieldBorderStyle}">
+                                <Label x:Name="EmailLabel"                                  
+                   Style="{StaticResource FieldLabelStyle}">
+                                    Loading...
+                                </Label>
+                            </Border>
+                            <ImageButton Style="{StaticResource EditButtonStyle}"
+                     x:Name="EmailButton"
+                     ZIndex="1"/>
+                        </HorizontalStackLayout>
+
+                        <!-- password -->
+                        <HorizontalStackLayout Spacing="15"
+                           HorizontalOptions="Center">
+                            <Border Style="{StaticResource FieldBorderStyle}">
+                                <Label x:Name="PasswordLabel" 
+                   Style="{StaticResource FieldLabelStyle}">
+                                    Loading...
+                                </Label>
+                            </Border>
+                            <ImageButton Style="{StaticResource EditButtonStyle}"
+                     x:Name="PasswordButton"
+                     ZIndex="1"/>
+                        </HorizontalStackLayout>
+
+
+
+
+                        <Label HorizontalOptions="Center" 
+                               FontAttributes="Bold" 
+                               FontSize="20"
+                               TextColor="Black"
+                               Margin="0,10,0,0">Setores Envolvidos:</Label>
+                        <VerticalStackLayout x:Name="SectorStack"/>
+
+
+                            <Button BackgroundColor="#FF3838"
+                                        Text="Sair da Conta"
+                                        TextColor="Black"
+                                        FontSize="18"
+                                        FontAttributes="Bold"
+                                        MaximumWidthRequest="260"
+                                        ZIndex="1"
+                                        Clicked="LogoutUser"/>
+
+                    <BoxView HeightRequest="10" BackgroundColor="Transparent"></BoxView>
+                </VerticalStackLayout>
+            </Grid>
+        </Grid>
+        </ScrollView>
+    </Grid>
+</ContentPage>

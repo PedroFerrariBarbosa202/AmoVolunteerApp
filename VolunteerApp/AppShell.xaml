@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="VolunteerApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:login="clr-namespace:VolunteerApp.Content.Pages.Login"
+    xmlns:page="clr-namespace:VolunteerApp.Pages">
+
+    <ShellContent
+       Route="StartupPage"
+       FlyoutItemIsVisible="False"
+       ContentTemplate="{DataTemplate page:StartupPage}"/>
+
+    <ShellContent
+        Route="MainPage"
+        Title="Página Principal"
+        ContentTemplate="{DataTemplate page:MainPage}"/>
+
+    <ShellContent
+        Route="ManagePage"
+        FlyoutItemIsVisible="False"
+        ContentTemplate="{DataTemplate page:ManagePage}"/>
+
+    <ShellContent
+        Route="AccountPage"
+        FlyoutItemIsVisible="False"
+        ContentTemplate="{DataTemplate login:AccountPage}" />
+
+    <ShellContent
+        Route="AccountLogPage"
+        FlyoutItemIsVisible="False"
+        ContentTemplate="{DataTemplate login:AccountLogPage}" />
+
+    <ShellContent
+        Route="EventPage"
+        FlyoutItemIsVisible="False"
+        ContentTemplate="{DataTemplate page:SecondPage}" />
+
+    <ShellContent
+        Route="ContactPage"
+        FlyoutItemIsVisible="False"
+        ContentTemplate="{DataTemplate login:ContactPage}" />
+
+    <MenuItem Text="Conta" Clicked="AccountRedirect"/>
+
+    <ShellContent Title="Detalhe de Setores"
+        Route="SectorDetailHome"
+        ContentTemplate="{DataTemplate page:SectorDetailsHomePage}" />
+
+    <ShellContent Title="Eventos"
+        Route="EventsPage"
+        ContentTemplate="{DataTemplate page:SecondPage}" />
+
+    <ShellContent
+        Title="Atividade"
+        ContentTemplate="{DataTemplate page:ActivityPage}" />
+
+    <ShellContent
+        Title="Configurações"
+        ContentTemplate="{DataTemplate page:SettingsPage}" />
+
+    <FlyoutItem Route="AccountDisconnected" Icon="user_icon.png" FlyoutItemIsVisible="False">
+
+        <ShellContent
+            Title="Credenciais"
+            ContentTemplate="{DataTemplate login:SigninPage}" />
+
+        <ShellContent
+            Title="Setores"
+            ContentTemplate="{DataTemplate login:TagsPage}" />
+
+        <ShellContent
+            Title="Confirmação"
+            ContentTemplate="{DataTemplate login:SigninConfirmationPage}" />
+
+    </FlyoutItem>
+
+    <Shell.FlyoutHeader>
+        <Grid Padding="20" BackgroundColor="#2A2A2A">
+            <VerticalStackLayout Spacing="8">
+                <Border
+                    HeightRequest="100"
+                    WidthRequest="100"
+                    Stroke="White"
+                    StrokeThickness="2"
+                    BackgroundColor="#e0d7d7"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    StrokeShape="RoundRectangle 75"
+                    Margin="0,0,0,10">
+
+                    <Image x:Name = "UserIcon" Source="no_img.png" Aspect="AspectFill"/>
+                </Border>
+
+                <Label x:Name = "UserName" Text="Nenhuma Conta" FontSize="20" TextColor="White"/>
+                <Label x:Name = "SubTitle" FontSize="16" TextColor="Gray"/>
+            </VerticalStackLayout>
+        </Grid>
+    </Shell.FlyoutHeader>
+</Shell>
