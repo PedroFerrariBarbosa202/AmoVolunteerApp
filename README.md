@@ -1,66 +1,15 @@
 <h1 align="center">
-	ON-BOARD DATA HANDLING 2.0
+	Amo Volunteer App
 	<br>
 </h1>
 
-<h4 align="center">On-board computer module designed and developed by SpaceLab.</h4>
-
-<p align="center">
-	<a href="https://github.com/spacelab-ufsc/spacelab#versioning">
-		<img src="https://img.shields.io/badge/status-production-red?style=for-the-badge">
-	</a>
-	<a href="https://github.com/spacelab-ufsc/obdh2/releases">
-		<img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/spacelab-ufsc/obdh2?style=for-the-badge">
-	</a>
-	<a href="https://github.com/spacelab-ufsc/obdh2/releases">
-		<img alt="GitHub commits since latest release (by date)" src="https://img.shields.io/github/commits-since/spacelab-ufsc/obdh2/latest?style=for-the-badge">
-	</a>
-	<a href="https://github.com/spacelab-ufsc/obdh2/commits/master">
-		<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/spacelab-ufsc/obdh2?style=for-the-badge">
-	</a>
-	<a href="https://github.com/spacelab-ufsc/obdh2/issues">
-		<img alt="GitHub issues" src="https://img.shields.io/github/issues/spacelab-ufsc/obdh2?style=for-the-badge">
-	</a>
-	<a href="https://github.com/spacelab-ufsc/obdh2/graphs/contributors">
-		<img alt="GitHub contributors" src="https://img.shields.io/github/contributors/spacelab-ufsc/obdh2?color=yellow&style=for-the-badge">
-	</a>
-</p>
-
-<p align="center">
-    <a href="#overview">Overview</a> •
-    <a href="#repository-organization">Repository Organizarion</a> •
-    <a href="#documentation">Documentation</a> •
-    <a href="#license">License</a> •
-    <a href="#releases">Releases</a> •
-    <a href="#notes">Notes</a>
-</p>
-
-<p align="center">
-	<img width="70%" src="https://github.com/spacelab-ufsc/obdh2/blob/master/doc/user_manual/img/obdh2-pcb-3d.png">
-</p>
+<h4 align="center">Application for managing volunteers for the institution Amo Criança.</h4>
 
 ## Overview
 
-The SpaceLab OBDH 2.0 (On-Board Data Handling 2.0) is one of the service modules developed for the FloripaSat-2 Cubesat platform. The OBDH 2.0 is responsible to synchronize actions and the data flow between other modules (ie. EPS, Payloads) and the Earth segment. It packs the generated data into data frames and transmit back to Earth through TTC module, or stores it on a non-volatile memory for later retrieval. Commands sent from Earth segment to the CubeSat will be received by the radio transceivers located in the TTC module and redirected to the OBDH 2.0, which takes the appropriate action or forward them to the responsible module.
-
-## Repository Organization
-
-- **doc**: Technical documentation (including an user manual and an slide presentation).
-- **firmware**: Source files of the firmware project.
-- **hardware**: Source files of the hardware project.
+A gestão de voluntários em ONGs pode ser otimizada pelo uso de ferramentas ou frameworks que auxiliem na organização e na comunicação entre voluntários e gestores. Procurou-se, com este trabalho, construir um aplicativo útil para uso geral e de fácil acesso e manipulação, além de introduzir uma conexão efetiva no processo de construção entre os diferentes elementos que constituem o aplicativo – layout de usuário, banco de dados e servidor de gerenciamento. Utilizou-se a metodologia proposta por Pressman (2021), visando à divisão do processo de desenvolvimento e facilitando o teste de elementos individuais. O projeto foi dividido em 3 fases de produção: aplicação, banco de dados e servidor de gerenciamento. Para a aplicação, os pesquisadores utilizaram o framework .Net MAUI a fim de realizar a fundamentação da interface de usuário e interação com o banco de dados. Esse, por sua vez, foi modelado inicialmente com a ferramenta Miro, seguindo a metodologia de Pressman (2021).
 
 ## Documentation
 
-The main documentation of the project can be seen [here](https://spacelab-ufsc.github.io/obdh2/).
+The main documentation of the project can be seen [here]([https://spacelab-ufsc.github.io/obdh2/](https://zenodo.org/records/18022183?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjY1ZDFjMDgyLTI2MWYtNDg2OC1iNTFmLTZjM2E0M2UwYjMzOCIsImRhdGEiOnt9LCJyYW5kb20iOiJjYmQwMDU5YzhhYThiOTA1MTEwNGUyMzkyNjRiNDY3ZiJ9.k3RTuz8o_prTPYkLAsWqgOX7oSlb1G5b-RID_wp-RL6iUTOPxoVtNhlZxQrGhGe01u3gSHyLJCZrzOGvwbUHWg)).
 
-## License
-
-This project is open-source under three different licenses: GNU General Public License v3.0 for firmware sources, CERN Open Hardware License v2.0 for hardware files, and CC BY-SA 4.0 for the documentation. Some third-part files and libraries are subjected to their specific terms and licenses.
-
-## Releases
-
-The OBDH 2.0 software and hardware releases are synchronized in order to garantee compatibility. Then, using diferent versions might lead to unpredictable behavior. Refer to the [documentation](https://spacelab-ufsc.github.io/obdh2/) for compatibility notes.
-
-## Notes
-
-More info about the SpaceLab: [GitHub](https://github.com/spacelab-ufsc/spacelab) or [Website](https://spacelab.ufsc.br/)
