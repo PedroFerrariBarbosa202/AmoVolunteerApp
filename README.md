@@ -11,5 +11,5 @@ A gestão de voluntários em ONGs pode ser otimizada pelo uso de ferramentas ou 
 
 ## Documentation
 
-The main documentation of the project can be seen [here]([https://spacelab-ufsc.github.io/obdh2/](https://zenodo.org/records/18022183?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjY1ZDFjMDgyLTI2MWYtNDg2OC1iNTFmLTZjM2E0M2UwYjMzOCIsImRhdGEiOnt9LCJyYW5kb20iOiJjYmQwMDU5YzhhYThiOTA1MTEwNGUyMzkyNjRiNDY3ZiJ9.k3RTuz8o_prTPYkLAsWqgOX7oSlb1G5b-RID_wp-RL6iUTOPxoVtNhlZxQrGhGe01u3gSHyLJCZrzOGvwbUHWg)).
+The main documentation of the project can be seen here: [(https://zenodo.org/records/18022183?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjY1ZDFjMDgyLTI2MWYtNDg2OC1iNTFmLTZjM2E0M2UwYjMzOCIsImRhdGEiOnt9LCJyYW5kb20iOiJjYmQwMDU5YzhhYThiOTA1MTEwNGUyMzkyNjRiNDY3ZiJ9.k3RTuz8o_prTPYkLAsWqgOX7oSlb1G5b-RID_wp-RL6iUTOPxoVtNhlZxQrGhGe01u3gSHyLJCZrzOGvwbUHWg]
 
